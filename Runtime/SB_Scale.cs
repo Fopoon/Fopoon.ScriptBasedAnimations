@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Fopoon
 {
-    public static partial class ScriptBasedAnimations
+    public static partial class SBAnimations
     {
         #region Methods
 
