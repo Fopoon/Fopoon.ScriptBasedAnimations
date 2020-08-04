@@ -2,7 +2,7 @@
 
 [//]: # (badges)
 [![Repo](https://img.shields.io/badge/repo-github-brightgreen)](https://github.com/Fopoon/Fopoon.ScriptBasedAnimations)
-[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/Fopoon/Fopoon.ScriptBasedAnimations/releases)
+[![Version](https://img.shields.io/badge/version-1.0.1-brightgreen.svg)](https://github.com/Fopoon/Fopoon.ScriptBasedAnimations/releases)
 
 A compilation of script-based animations.
 
