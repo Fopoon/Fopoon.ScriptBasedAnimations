@@ -1,0 +1,6 @@
+{
+    "name": "Fopoon.ScriptBasedAnimations.LeanTweenSupport",
+    "references": [
+        "LeanTween"
+    ]
+}
