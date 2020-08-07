@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Added LT_PopInOut.cs
+
 ## [1.0.1] - 2020-08-04
 
 - Renamed ScriptBasedAnimations.cs to SBAnimations.cs
