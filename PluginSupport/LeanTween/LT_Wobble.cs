@@ -7,6 +7,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 {
     public static partial class LTAnimations
     {
+        #region Methods
+
         /// <summary>
         /// Rotates the gameObject back and forth around the given axis.
         /// </summary>
@@ -72,6 +74,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 
             Start();
         }
+
+        #endregion
     }
 }
 

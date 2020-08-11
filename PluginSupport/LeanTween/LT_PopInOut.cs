@@ -7,6 +7,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 {
     public static partial class LTAnimations
     {
+        #region Methods
+
         /// <summary>
         /// Fades in while scaling the CanvasGroup to one.
         /// </summary>
@@ -218,6 +220,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 
             Start();
         }
+
+        #endregion
     }
 }
 

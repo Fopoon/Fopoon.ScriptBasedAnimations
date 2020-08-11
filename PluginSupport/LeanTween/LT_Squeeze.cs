@@ -7,6 +7,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 {
     public static partial class LTAnimations
     {
+        #region Methods
+
         /// <summary>
         /// Scales the gameObject using the <paramref name="squeezeScalar"/> and back to its original scale.
         /// </summary>
@@ -55,6 +57,8 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
 
             Start();
         }
+
+        #endregion
     }
 }
 

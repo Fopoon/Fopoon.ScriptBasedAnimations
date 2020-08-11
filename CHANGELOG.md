@@ -4,7 +4,11 @@
 
 ## [1.0.2] - 2020-08-11
 - Added LT_PopInOut.cs
+- Added LT_Bounce.cs
+- Added LT_Inflate.cs
+- Added LT_Move.cs
 - Added optional LeanTweenType parameter to all LT_*.cs files.
+- Fixed missing regions.
 
 ## [1.0.1] - 2020-08-04
 
