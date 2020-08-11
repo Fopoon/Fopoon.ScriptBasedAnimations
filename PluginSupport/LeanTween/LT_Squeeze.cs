@@ -14,12 +14,16 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// <param name="squeezeScalar"></param>
         /// <param name="durationIn"></param>
         /// <param name="durationOut"></param>
+        /// <param name="easeIn"></param>
+        /// <param name="easeOut"></param>
         /// <param name="onComplete"></param>
         public static void SqueezeInOut(
             GameObject gameObject,
             float squeezeScalar,
             float durationIn,
             float durationOut,
+            LeanTweenType easeIn = LeanTweenType.linear,
+            LeanTweenType easeOut = LeanTweenType.linear,
             Action onComplete = null)
         {
             var originalScale = gameObject.transform.localScale;
@@ -33,12 +37,14 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             void SqueezeIn()
             {
                 LeanTween.scale(gameObject, squeezedScale, durationIn)
+                         .setEase(easeIn)
                          .setOnComplete(SqueezeOut);
             }
 
             void SqueezeOut()
             {
                 LeanTween.scale(gameObject, originalScale, durationOut)
+                         .setEase(easeOut)
                          .setOnComplete(OnComplete);
             }
 

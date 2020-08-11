@@ -15,6 +15,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// <param name="angle"></param>
         /// <param name="duration"></param>
         /// <param name="loops"></param>
+        /// <param name="ease"></param>
         /// <param name="onComplete"></param>
         public static void Wobble(
             GameObject gameObject,
@@ -22,6 +23,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             float angle,
             float duration,
             int loops,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             loops = Mathf.Clamp(loops, 0, int.MaxValue);
@@ -38,6 +40,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             void WobbleStart()
             {
                 LeanTween.rotateAroundLocal(gameObject, axis, -halfAngle, halfWobbleDuration)
+                         .setEase(ease)
                          .setOnComplete(() =>
                          {
                              if (loops == 0)
@@ -51,12 +54,14 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             {
                 LeanTween.rotateAroundLocal(gameObject, axis, angle, halfWobbleDuration)
                          .setLoopPingPong(loops)
+                         .setEase(ease)
                          .setOnComplete(WobbleEnd);
             }
 
             void WobbleEnd()
             {
                 LeanTween.rotateAroundLocal(gameObject, axis, halfAngle, halfWobbleDuration)
+                         .setEase(ease)
                          .setOnComplete(OnComplete);
             }
 

@@ -12,10 +12,12 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// </summary>
         /// <param name="canvasGroup"></param>
         /// <param name="duration"></param>
+        /// <param name="ease"></param>
         /// <param name="onComplete"></param>
         public static void PopIn(
             CanvasGroup canvasGroup,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             const float TO = 1f;
@@ -24,6 +26,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                 canvasGroup,
                 TO,
                 duration,
+                ease,
                 onComplete);
         }
 
@@ -32,10 +35,12 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// </summary>
         /// <param name="canvasGroup"></param>
         /// <param name="duration"></param>
+        /// <param name="ease"></param>
         /// <param name="onComplete"></param>
         public static void PopOut(
             CanvasGroup canvasGroup,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             const float TO = 0f;
@@ -44,6 +49,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                 canvasGroup,
                 TO,
                 duration,
+                ease,
                 onComplete);
         }
 
@@ -52,10 +58,12 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// </summary>
         /// <param name="gameObject"></param>
         /// <param name="duration"></param>
+        /// <param name="ease"></param>
         /// <param name="onComplete"></param>
         public static void PopIn(
             GameObject gameObject,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             const float TO = 1f;
@@ -64,6 +72,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                 gameObject,
                 TO,
                 duration,
+                ease,
                 onComplete);
         }
 
@@ -72,10 +81,12 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         /// </summary>
         /// <param name="gameObject"></param>
         /// <param name="duration"></param>
+        /// <param name="ease"></param>
         /// <param name="onComplete"></param>
         public static void PopOut(
             GameObject gameObject,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             const float TO = 0f;
@@ -84,6 +95,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                 gameObject,
                 TO,
                 duration,
+                ease,
                 onComplete);
         }
 
@@ -91,6 +103,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             CanvasGroup canvasGroup,
             float to,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             var fadeFinished = false;
@@ -108,6 +121,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                              canvasGroup,
                              to,
                              duration)
+                         .setEase(ease)
                          .setOnComplete(FadeEnd);
             }
 
@@ -117,6 +131,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                              canvasGroup.gameObject,
                              to * Vector3.one,
                              duration)
+                         .setEase(ease)
                          .setOnComplete(ScaleEnd);
             }
 
@@ -148,6 +163,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
             GameObject gameObject,
             float to,
             float duration,
+            LeanTweenType ease = LeanTweenType.linear,
             Action onComplete = null)
         {
             var fadeFinished = false;
@@ -165,6 +181,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                              gameObject,
                              to,
                              duration)
+                         .setEase(ease)
                          .setOnComplete(FadeEnd);
             }
 
@@ -174,6 +191,7 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
                              gameObject,
                              to * Vector3.one,
                              duration)
+                         .setEase(ease)
                          .setOnComplete(ScaleEnd);
             }
 

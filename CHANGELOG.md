@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
+## [1.0.2] - 2020-08-11
 - Added LT_PopInOut.cs
+- Added optional LeanTweenType parameter to all LT_*.cs files.
 
 ## [1.0.1] - 2020-08-04
 
