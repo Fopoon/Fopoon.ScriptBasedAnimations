@@ -1,3 +1,5 @@
+#if LEAN_TWEEN
+
 using UnityEngine;
 
 namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
@@ -47,3 +49,5 @@ namespace Fopoon.ScriptBasedAnimations.LeanTweenSupport
         #endregion
     }
 }
+
+#endif

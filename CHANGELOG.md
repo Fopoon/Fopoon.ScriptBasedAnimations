@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [1.0.3] - 2020-08-12
+- Fixed missing define scripting symbols.
+
 ## [1.0.2] - 2020-08-11
 - Added LT_PopInOut.cs
 - Added LT_Bounce.cs
